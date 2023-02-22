@@ -1,5 +1,5 @@
 import { ESLintUtils } from '@typescript-eslint/utils';
-import rule from '../hooman-code/prefer-alto-external-design-system-web-alias-import';
+import rule from '../generated-code/prefer-alto-external-design-system-web-alias-import';
 
 const ruleTester = new ESLintUtils.RuleTester({
   parser: '@typescript-eslint/parser',

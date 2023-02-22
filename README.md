@@ -1,5 +1,5 @@
 # ai-code-tooling
-A little doohicky that uses GPT3 to try and write your code tooling for you. Provide a prompt and tests, GPT3 does the rest!
+A little doohicky that uses GPT3 to try and write your code tooling for you. Provide a prompt and tests, GPT3 does the rest! Currently only supports writing custom lint rules. Will eventually expand to generating codemods and maybe even translating class components to functional components.
 
 ## How to Use
 1. Run `yarn install`.

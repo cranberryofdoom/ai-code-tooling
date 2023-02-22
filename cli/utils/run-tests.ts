@@ -9,10 +9,11 @@ let currentNumRuns = 1;
 
 type PreviousPrompt = { promptFileName: string, askSection: string, testSection: string, gptCode: string };
 export const runTests = ({ promptFileName, askSection, testSection, gptCode }: PreviousPrompt) => {
-  console.log(chalk.yellow('> ') + '👀 Seeing if tests pass for the AI generated code. Running ' + chalk.red('`yarn jest`') + '...');
-  exec('yarn test', async (error, _) => {
+  const testFilePath = `./tests/${promptFileName}.test.ts`;
+  const command = `yarn jest ${testFilePath}`;
+  console.log(chalk.yellow('> ') + '👀 Seeing if tests pass for the AI generated code. Running ' + chalk.red(command) + '...');
+  exec(command, async (error, _) => {
     const filePath = `./generated-code/${promptFileName}.ts`;
-
     if (error) {
       const jestError = error.message;
       console.log(chalk.gray(jestError));

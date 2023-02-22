@@ -1,1 +1,1 @@
-errors on all relative and absolute imports of `external-design-system-web` and replaces it with the alias: `@alto/external-design-system-web`
+errors on all relative and absolute imports of `'external-design-system-web'` and replaces it with the alias: `'@alto/external-design-system-web'`

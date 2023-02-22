@@ -1,0 +1,1 @@
+errors on imports of `styled` from the library `'styled-components'`, and instead imports `styled` from the library `'styled-components/native'`. However, it will not replace `StyledComponent` type imports from `'styled-components'`.

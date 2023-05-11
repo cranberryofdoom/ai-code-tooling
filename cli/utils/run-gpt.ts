@@ -9,15 +9,19 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 export const runGPT = async (prompt: string) => {
-  const response = await openai.createCompletion({
-    model: "code-davinci-002",
-    prompt: prompt,
-    temperature: 0,
-    max_tokens: 512,
-    top_p: 1,
-    frequency_penalty: 0,
-    presence_penalty: 0,
-    stop: ["```"],
-  });
-  return response.data.choices[0].text;
+  try {
+    const response = await openai.createCompletion({
+      model: "text-davinci-003",
+      prompt: prompt,
+      temperature: 0,
+      max_tokens: 512,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0,
+      stop: ["```"],
+    });
+    return response.data.choices[0].text;
+  } catch (error) {
+    throw error;
+  }
 }
